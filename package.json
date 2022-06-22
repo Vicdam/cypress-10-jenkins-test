@@ -1,0 +1,14 @@
+{
+  "name": "cypress-10-jenkins-test",
+  "version": "1.0.0",
+  "description": "Jenkins test for cypress 10",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Victor Adesanya",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.2.0"
+  }
+}
