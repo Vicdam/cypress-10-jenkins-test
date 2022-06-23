@@ -34,7 +34,7 @@ pipeline{
                 // sh 'ls'
                 // sh 'npm install'
                 sh 'ls'
-                sh "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
+                sh "npx cypress run --browser chrome --spec cypress/integration/**/**"
                 // }
                 
             }
