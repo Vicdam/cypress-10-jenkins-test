@@ -2,7 +2,7 @@ pipeline{
 
     agent any
 
-    tools {nodejs "node"}
+    // tools {nodejs "node"}
 
     parameters{
         string(name: "SPEC", defaultValue: "cypress/integration/**/**", description: "Enter the script path that you want to execute")
@@ -46,5 +46,10 @@ pipeline{
         //     }  
         //  }
 
+    }
+    post{
+        always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+        }
     }
 }
